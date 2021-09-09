@@ -4,6 +4,10 @@ def resetWar(credentials, host, name) {
   launchJob(credentials, host, name, "reset_war")
 }
 
+def resetWar(credentials, host, name) {
+  launchJob(credentials, host, name, "stop")
+}
+
 def launchJob(credentials, host, name, action) {
   def json = JsonOutput.toJson(
     [extra_vars: [
