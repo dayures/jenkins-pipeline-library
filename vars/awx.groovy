@@ -4,7 +4,7 @@ def resetWar(credentials, host, name) {
   launchJob(credentials, host, name, "reset_war")
 }
 
-def resetWar(credentials, host, name) {
+def stoptWar(credentials, host, name) {
   launchJob(credentials, host, name, "stop")
 }
 
