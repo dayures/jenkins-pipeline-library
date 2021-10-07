@@ -11,7 +11,7 @@ def startClusterAndSeed( name, port, channel ) {
     wait("$port")
 }
 
-def startClusterAndSpecificSeed( name, port, channel, seedFile ) {
+def startClusterAndSeedWithFile( name, port, channel, seedFile ) {
     sh "d2 cluster --channel ${channel} --port ${port} up --update ${name} --seed --seedFile {seedFile}"
     
     wait("$port")
