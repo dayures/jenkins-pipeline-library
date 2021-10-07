@@ -11,6 +11,12 @@ def startClusterAndSeed( name, port, channel ) {
     wait("$port")
 }
 
+def startClusterAndSeedWithFile( name, port, channel, seedFile ) {
+    sh "d2 cluster --channel ${channel} --port ${port} up --update ${name} --seed --seedFile {seedFile}"
+    
+    wait("$port")
+}
+
 def stopCluster( name ) {
     sh "d2 cluster down --clean ${name}"
 }
